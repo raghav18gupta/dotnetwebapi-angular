@@ -13,7 +13,7 @@
 
 
 # Section 3 - API Architecture
-  1. Repository pattern:
+  1. **Repository pattern**:
      - Inject IRepository into the Controller: `GetProducts()`
      - Repository has access to DbContext: `_context.Product.ToList()`
      - DbCOntext will translate into a SQL query: `SELECT * FROM PRODUCTS`
@@ -36,7 +36,37 @@
       - This time - another way to do migrations:
         - `/API/Program.cs`: `await context.Database.MigrateAsync();`
         - This will do pending migrations itself while building application.
-   5. Eager loadig.
+   5. **Eager loadig**.
       - Eager loading is achieved using the Include() method.
       - `/API/Controllers/Products.cs`
-   6. 
+
+# Section 4 - API Generic Repository
+   1. **Generic Repository**
+      - `/Core/Interfaces/IGenericRepository.cs`
+        - `where T : BaseEntity` - This repository will be used only by the classes which derives the `BaseEntity`.
+      - `/Infrastructure/Data/GenericRepository.cs`
+      - Register service - `/API/Startup.cs`
+        - `services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));`
+      - Issues with this design.
+        - Need to inject multiple repositories.
+        - Eagar loading not possible.
+        - Generic Repository is an anti pattern!
+   2. **Specification Pattern**
+      - What is?
+        - Describes a query in an object.
+        - Returns an IQueryable<T>
+        - Generic List method takes specification as a parameter.
+        - Specification parameter can have a meaningful name.
+      - How to?
+        - `/Core/Specifications/ISpecification.cs` - Here we specify two properties: `Criteria` and `Includes`
+        - `/Core/Specifications/BaseSpecification.cs` - Implements `ISpecification`. Additionally, has `AddInclude()` method.
+        - `IGenericRepository` will have `GetEntityWithSpecification` and `ListAsync(ISpecification<T>)`
+        - `/Infrastructure/Data/SpecificationEvaluator.cs` - will add includes in our query.
+   3. **Shaping Data**
+      - `/API/Dtos/ProductToReturnDto.cs`
+   4. **AutoMapper**
+      - `services.AddAutoMapper(typeof(MappingProfiles));`
+      - `_mapper.Map<Product, ProductToReturnDto>(product)`
+   5. Serve **static content from API**
+      - Add new folder `/API/wwwroot`
+      - `app.UseStaticFiles();`

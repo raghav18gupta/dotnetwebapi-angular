@@ -1,1 +1,137 @@
-{"client":"Thunder Client","collectionName":"E Commerce","dateExported":"2021-12-05T11:20:00.100Z","version":"1.1","folders":[{"containerId":"","sortNum":10000,"name":"Product","_id":"3babcd65-4693-46ae-99df-c1314b0a1d82","created":"2021-12-02T18:24:50.860Z"}],"requests":[{"containerId":"3babcd65-4693-46ae-99df-c1314b0a1d82","sortNum":10000,"headers":[{"name":"Accept","value":"*/*"},{"name":"User-Agent","value":"Thunder Client (https://www.thunderclient.io)"}],"colId":"7e6b3ade-94cd-46ae-94c9-719435dc238b","name":"/api/Products","url":"{{url}}/api/Products","method":"GET","modified":"2021-12-04T12:20:39.627Z","created":"2021-12-02T18:21:19.840Z","_id":"dddd68bb-724e-4b82-8b40-4f32e1a7ea74","params":[],"tests":[]},{"containerId":"3babcd65-4693-46ae-99df-c1314b0a1d82","sortNum":30000,"headers":[{"name":"Accept","value":"*/*"},{"name":"User-Agent","value":"Thunder Client (https://www.thunderclient.io)"}],"colId":"7e6b3ade-94cd-46ae-94c9-719435dc238b","name":"/api/Products/{id}","url":"{{url}}/api/Products/1","method":"GET","modified":"2021-12-04T12:34:49.683Z","created":"2021-12-02T18:25:14.207Z","_id":"9539017f-b9ac-4f15-8ad6-79d389838ed6","params":[],"tests":[]},{"containerId":"3babcd65-4693-46ae-99df-c1314b0a1d82","sortNum":40000,"headers":[{"name":"Accept","value":"*/*"},{"name":"User-Agent","value":"Thunder Client (https://www.thunderclient.io)"}],"colId":"7e6b3ade-94cd-46ae-94c9-719435dc238b","name":"/api/Products/Brands","url":"{{url}}/api/Products/Brands","method":"GET","modified":"2021-12-05T11:19:31.907Z","created":"2021-12-05T11:19:14.830Z","_id":"73236c75-7c4b-4073-8625-c9b2d03ca288","params":[],"tests":[]},{"containerId":"3babcd65-4693-46ae-99df-c1314b0a1d82","sortNum":50000,"headers":[{"name":"Accept","value":"*/*"},{"name":"User-Agent","value":"Thunder Client (https://www.thunderclient.io)"}],"colId":"7e6b3ade-94cd-46ae-94c9-719435dc238b","name":"/api/Products/Types","url":"{{url}}/api/Products/Types","method":"GET","modified":"2021-12-05T11:19:55.408Z","created":"2021-12-05T11:19:44.364Z","_id":"7f661598-05eb-4c01-b156-184e6c416ebb","params":[],"tests":[]}]}
+{
+  "client": "Thunder Client",
+  "collectionName": "E Commerce",
+  "dateExported": "2021-12-05T17:13:06.783Z",
+  "version": "1.1",
+  "folders": [
+    {
+      "containerId": "",
+      "sortNum": 10000,
+      "name": "Product",
+      "_id": "3babcd65-4693-46ae-99df-c1314b0a1d82",
+      "created": "2021-12-02T18:24:50.860Z"
+    }
+  ],
+  "requests": [
+    {
+      "containerId": "3babcd65-4693-46ae-99df-c1314b0a1d82",
+      "sortNum": 10000,
+      "headers": [
+        { "name": "Accept", "value": "*/*" },
+        {
+          "name": "User-Agent",
+          "value": "Thunder Client (https://www.thunderclient.io)"
+        }
+      ],
+      "colId": "7e6b3ade-94cd-46ae-94c9-719435dc238b",
+      "name": "/api/Products",
+      "url": "{{url}}/api/Products",
+      "method": "GET",
+      "modified": "2021-12-04T12:20:39.627Z",
+      "created": "2021-12-02T18:21:19.840Z",
+      "_id": "dddd68bb-724e-4b82-8b40-4f32e1a7ea74",
+      "params": [],
+      "tests": []
+    },
+    {
+      "containerId": "3babcd65-4693-46ae-99df-c1314b0a1d82",
+      "sortNum": 12500,
+      "headers": [
+        { "name": "Accept", "value": "*/*" },
+        {
+          "name": "User-Agent",
+          "value": "Thunder Client (https://www.thunderclient.io)"
+        }
+      ],
+      "colId": "7e6b3ade-94cd-46ae-94c9-719435dc238b",
+      "name": "/api/Products/{id}",
+      "url": "{{url}}/api/Products/1",
+      "method": "GET",
+      "modified": "2021-12-05T16:43:33.513Z",
+      "created": "2021-12-02T18:25:14.207Z",
+      "_id": "9539017f-b9ac-4f15-8ad6-79d389838ed6",
+      "params": [],
+      "tests": []
+    },
+    {
+      "containerId": "3babcd65-4693-46ae-99df-c1314b0a1d82",
+      "sortNum": 15000,
+      "headers": [
+        { "name": "Accept", "value": "*/*" },
+        {
+          "name": "User-Agent",
+          "value": "Thunder Client (https://www.thunderclient.io)"
+        }
+      ],
+      "colId": "7e6b3ade-94cd-46ae-94c9-719435dc238b",
+      "name": "/api/Products/Brands",
+      "url": "{{url}}/api/Products/Brands",
+      "method": "GET",
+      "modified": "2021-12-05T16:43:15.243Z",
+      "created": "2021-12-05T11:19:14.830Z",
+      "_id": "73236c75-7c4b-4073-8625-c9b2d03ca288",
+      "params": [],
+      "tests": []
+    },
+    {
+      "containerId": "3babcd65-4693-46ae-99df-c1314b0a1d82",
+      "sortNum": 17500,
+      "headers": [
+        { "name": "Accept", "value": "*/*" },
+        {
+          "name": "User-Agent",
+          "value": "Thunder Client (https://www.thunderclient.io)"
+        }
+      ],
+      "colId": "7e6b3ade-94cd-46ae-94c9-719435dc238b",
+      "name": "/api/Products/Types",
+      "url": "{{url}}/api/Products/Types",
+      "method": "GET",
+      "modified": "2021-12-05T16:43:20.005Z",
+      "created": "2021-12-05T11:19:44.364Z",
+      "_id": "7f661598-05eb-4c01-b156-184e6c416ebb",
+      "params": [],
+      "tests": []
+    },
+    {
+      "containerId": "3babcd65-4693-46ae-99df-c1314b0a1d82",
+      "sortNum": 20000,
+      "headers": [
+        { "name": "Accept", "value": "*/*" },
+        {
+          "name": "User-Agent",
+          "value": "Thunder Client (https://www.thunderclient.io)"
+        }
+      ],
+      "colId": "7e6b3ade-94cd-46ae-94c9-719435dc238b",
+      "name": "/api/ProductsGeneric",
+      "url": "{{url}}/api/ProductsGeneric",
+      "method": "GET",
+      "modified": "2021-12-05T15:24:31.709Z",
+      "created": "2021-12-05T15:23:33.113Z",
+      "_id": "96ba8e70-891c-47ec-9022-03c06e5d7cbf",
+      "params": [],
+      "tests": []
+    },
+    {
+      "containerId": "3babcd65-4693-46ae-99df-c1314b0a1d82",
+      "sortNum": 35000,
+      "headers": [
+        { "name": "Accept", "value": "*/*" },
+        {
+          "name": "User-Agent",
+          "value": "Thunder Client (https://www.thunderclient.io)"
+        }
+      ],
+      "colId": "7e6b3ade-94cd-46ae-94c9-719435dc238b",
+      "name": "/api/ProductsGeneric/{id}",
+      "url": "{{url}}/api/ProductsGeneric/1",
+      "method": "GET",
+      "modified": "2021-12-05T15:55:32.085Z",
+      "created": "2021-12-05T15:52:43.196Z",
+      "_id": "c6cf6c17-95c5-4f94-90bf-220d1f57333a",
+      "params": [],
+      "tests": []
+    }
+  ]
+}
