@@ -1,0 +1,10 @@
+[
+    {
+        "Name" : "Angular for Dummies",
+        "Description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut sodales ex. Integer id augue vel nisi sodales blandit eu vitae dui. Cras in lacus ligula. Donec congue eget tortor ac sagittis. Etiam vitae blandit lorem. In euismod eros a posuere ornare. Maecenas eget tempor quam.",
+        "Price" : 200,
+        "PictureUrl" : "images/products/sb-ang1.png",
+        "ProductTypeId" : 1,
+        "ProductBrandId" : 1
+    }
+]

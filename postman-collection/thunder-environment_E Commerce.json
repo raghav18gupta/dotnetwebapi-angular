@@ -1,0 +1,7 @@
+{
+  "client": "Thunder Client",
+  "environmentName": "https://localhost:7270",
+  "dateExported": "2021-12-03T15:21:03.377Z",
+  "version": "1.0",
+  "variables": [{ "name": "url", "value": "https://localhost:7270" }]
+}
