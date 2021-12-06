@@ -6,9 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers
 {
-    [ApiController]
-    [Route("api/[controller]")]
-    public class Products : Controller
+    public class Products : BaseApiController
     {
         private readonly IProductRepository _productRepository;
         public Products(IProductRepository productRepository)

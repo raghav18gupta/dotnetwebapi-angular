@@ -1,8 +1,8 @@
-using Core.Interfaces;
 using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
-using AutoMapper;
 using API.Helpers;
+using API.Middileware;
+using API.Extensions;
 
 namespace API
 {
@@ -20,29 +20,32 @@ namespace API
         {
 
             services.AddControllers();
-            //services.AddSwaggerGen(c =>
-            //{
-            //    c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebAPIv5", Version = "v1" });
-            //});
+
+            services.AddApplicationServices();
+            services.AddSwaggerDocumentation();
+            
 
             services.AddDbContext<StoreContext>(
                 options => options.UseSqlServer(this.Configuration.GetConnectionString("DefaultConnection"))
             );
             
-            services.AddScoped<IProductRepository, ProductRepository>();
-            services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             services.AddAutoMapper(typeof(MappingProfiles));
+
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseMiddleware<ExceptionMiddileware>();
+
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
-                //app.UseSwagger();
-                //app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebAPIv5 v1"));
+                //app.UseDeveloperExceptionPage();
+                app.UseSwaggerDocumentation();
             }
+
+            app.UseStatusCodePagesWithReExecute("/errors/{0}");
 
             app.UseHttpsRedirection();
 

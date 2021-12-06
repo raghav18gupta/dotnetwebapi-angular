@@ -1,15 +1,15 @@
 ﻿using API.Dtos;
+using API.Errors;
 using AutoMapper;
 using Core.Entities;
 using Core.Interfaces;
 using Core.Specifications;
 using Microsoft.AspNetCore.Mvc;
+using System.Net;
 
 namespace API.Controllers
 {
-    [ApiController]
-    [Route("api/[controller]")]
-    public class ProductsGenericController : Controller
+    public class ProductsGenericController : BaseApiController
     {
         private IGenericRepository<Product> _productRepository;
         private IGenericRepository<ProductType> _productTypeRepository;
@@ -39,10 +39,16 @@ namespace API.Controllers
         }
 
         [HttpGet("{i}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status404NotFound)]
         public async Task<ActionResult<ProductToReturnDto>> GetProduct(int i)
         {
             var specification = new ProductsWithTypesAndBrandsSpecification(i);
             var product = await _productRepository.GetEntityWithSpecification(specification);
+
+            if (product == null)
+                return NotFound(new ApiResponse((int)HttpStatusCode.NotFound));
+
             return _mapper.Map<Product, ProductToReturnDto>(product);
         }
 
