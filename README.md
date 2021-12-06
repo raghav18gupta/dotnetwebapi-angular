@@ -80,3 +80,4 @@
    3. **Searching**
    4. **Paging**
    5. **CORS**
+# Section 7 - Client - Angular
