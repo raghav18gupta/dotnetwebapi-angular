@@ -70,5 +70,13 @@
    5. Serve **static content from API**
       - Add new folder `/API/wwwroot`
       - `app.UseStaticFiles();`
+
 # Section 5 - API Error Handling
-   1. Check [delta](https://github.com/raghav18gupta/dotnetwebapi-angular/commit/)
+   1. Check [delta](https://github.com/raghav18gupta/dotnetwebapi-angular/commit/f193c08e33c81d2a4585fb0ebb2d2902b71433db)
+
+# Section 6 - API Paging, Filtering, Sorting, Searching
+   1. **Sorting**
+   2. **Filtering**
+   3. **Searching**
+   4. **Paging**
+   5. **CORS**

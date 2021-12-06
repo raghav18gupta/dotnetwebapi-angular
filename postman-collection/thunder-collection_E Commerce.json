@@ -1,7 +1,7 @@
 {
   "client": "Thunder Client",
   "collectionName": "E Commerce",
-  "dateExported": "2021-12-05T17:13:06.783Z",
+  "dateExported": "2021-12-06T17:22:47.750Z",
   "version": "1.1",
   "folders": [
     {
@@ -10,9 +10,50 @@
       "name": "Product",
       "_id": "3babcd65-4693-46ae-99df-c1314b0a1d82",
       "created": "2021-12-02T18:24:50.860Z"
+    },
+    {
+      "containerId": "",
+      "sortNum": 15000,
+      "name": "Generic Product",
+      "_id": "a04dc421-1aac-43d5-8423-9ed2ffb8f73b",
+      "created": "2021-12-05T18:17:29.857Z"
+    },
+    {
+      "containerId": "",
+      "sortNum": 20000,
+      "name": "Error Handleing",
+      "_id": "d0d93eaf-7d33-4f28-9901-6fcfaabbc422",
+      "created": "2021-12-05T18:09:31.045Z"
+    },
+    {
+      "containerId": "",
+      "sortNum": 30000,
+      "name": "Paging, Filtering, Sorting, Searching",
+      "_id": "ec31288f-b656-4b80-a2fb-24cf7c4d3bbd",
+      "created": "2021-12-06T15:45:42.199Z"
     }
   ],
   "requests": [
+    {
+      "containerId": "a04dc421-1aac-43d5-8423-9ed2ffb8f73b",
+      "sortNum": 10000,
+      "headers": [
+        { "name": "Accept", "value": "*/*" },
+        {
+          "name": "User-Agent",
+          "value": "Thunder Client (https://www.thunderclient.io)"
+        }
+      ],
+      "colId": "7e6b3ade-94cd-46ae-94c9-719435dc238b",
+      "name": "/api/ProductsGeneric",
+      "url": "{{url}}/api/ProductsGeneric",
+      "method": "GET",
+      "modified": "2021-12-05T18:17:38.834Z",
+      "created": "2021-12-05T15:23:33.113Z",
+      "_id": "96ba8e70-891c-47ec-9022-03c06e5d7cbf",
+      "params": [],
+      "tests": []
+    },
     {
       "containerId": "3babcd65-4693-46ae-99df-c1314b0a1d82",
       "sortNum": 10000,
@@ -94,28 +135,8 @@
       "tests": []
     },
     {
-      "containerId": "3babcd65-4693-46ae-99df-c1314b0a1d82",
+      "containerId": "a04dc421-1aac-43d5-8423-9ed2ffb8f73b",
       "sortNum": 20000,
-      "headers": [
-        { "name": "Accept", "value": "*/*" },
-        {
-          "name": "User-Agent",
-          "value": "Thunder Client (https://www.thunderclient.io)"
-        }
-      ],
-      "colId": "7e6b3ade-94cd-46ae-94c9-719435dc238b",
-      "name": "/api/ProductsGeneric",
-      "url": "{{url}}/api/ProductsGeneric",
-      "method": "GET",
-      "modified": "2021-12-05T15:24:31.709Z",
-      "created": "2021-12-05T15:23:33.113Z",
-      "_id": "96ba8e70-891c-47ec-9022-03c06e5d7cbf",
-      "params": [],
-      "tests": []
-    },
-    {
-      "containerId": "3babcd65-4693-46ae-99df-c1314b0a1d82",
-      "sortNum": 35000,
       "headers": [
         { "name": "Accept", "value": "*/*" },
         {
@@ -127,10 +148,308 @@
       "name": "/api/ProductsGeneric/{id}",
       "url": "{{url}}/api/ProductsGeneric/1",
       "method": "GET",
-      "modified": "2021-12-05T15:55:32.085Z",
+      "modified": "2021-12-05T18:17:41.050Z",
       "created": "2021-12-05T15:52:43.196Z",
       "_id": "c6cf6c17-95c5-4f94-90bf-220d1f57333a",
       "params": [],
+      "tests": []
+    },
+    {
+      "containerId": "ec31288f-b656-4b80-a2fb-24cf7c4d3bbd",
+      "sortNum": 32500,
+      "headers": [
+        { "name": "Accept", "value": "*/*" },
+        {
+          "name": "User-Agent",
+          "value": "Thunder Client (https://www.thunderclient.io)"
+        }
+      ],
+      "colId": "7e6b3ade-94cd-46ae-94c9-719435dc238b",
+      "name": "GetProducts OrderBy Name - Default Case",
+      "url": "{{url}}/api/ProductsGeneric",
+      "method": "GET",
+      "modified": "2021-12-06T16:04:06.891Z",
+      "created": "2021-12-06T15:51:24.912Z",
+      "_id": "e7004b00-46b5-4727-912c-74ce1ad73cee",
+      "params": [],
+      "tests": []
+    },
+    {
+      "containerId": "ec31288f-b656-4b80-a2fb-24cf7c4d3bbd",
+      "sortNum": 48750,
+      "headers": [
+        { "name": "Accept", "value": "*/*" },
+        {
+          "name": "User-Agent",
+          "value": "Thunder Client (https://www.thunderclient.io)"
+        }
+      ],
+      "colId": "7e6b3ade-94cd-46ae-94c9-719435dc238b",
+      "name": "GetProducts OrderBy Price Asc",
+      "url": "{{url}}/api/ProductsGeneric?sort=priceAsc",
+      "method": "GET",
+      "modified": "2021-12-06T16:04:37.794Z",
+      "created": "2021-12-06T16:02:53.509Z",
+      "_id": "a6568ca5-14b9-48ea-b4e7-db2879852aa0",
+      "params": [{ "name": "sort", "value": "priceAsc", "isPath": false }],
+      "tests": []
+    },
+    {
+      "containerId": "ec31288f-b656-4b80-a2fb-24cf7c4d3bbd",
+      "sortNum": 65000,
+      "headers": [
+        { "name": "Accept", "value": "*/*" },
+        {
+          "name": "User-Agent",
+          "value": "Thunder Client (https://www.thunderclient.io)"
+        }
+      ],
+      "colId": "7e6b3ade-94cd-46ae-94c9-719435dc238b",
+      "name": "GetProducts OrderBy Price Desc",
+      "url": "{{url}}/api/ProductsGeneric?sort=priceDesc",
+      "method": "GET",
+      "modified": "2021-12-06T16:04:25.131Z",
+      "created": "2021-12-06T16:01:51.593Z",
+      "_id": "bd44569d-3f68-4b42-9e5c-11ebe1c2850c",
+      "params": [{ "name": "sort", "value": "priceDesc", "isPath": false }],
+      "tests": []
+    },
+    {
+      "containerId": "ec31288f-b656-4b80-a2fb-24cf7c4d3bbd",
+      "sortNum": 75000,
+      "headers": [
+        { "name": "Accept", "value": "*/*" },
+        {
+          "name": "User-Agent",
+          "value": "Thunder Client (https://www.thunderclient.io)"
+        }
+      ],
+      "colId": "7e6b3ade-94cd-46ae-94c9-719435dc238b",
+      "name": "GetProducts FilterBy ProductId",
+      "url": "{{url}}/api/ProductsGeneric?brandId=1",
+      "method": "GET",
+      "modified": "2021-12-06T16:14:19.000Z",
+      "created": "2021-12-06T16:12:55.128Z",
+      "_id": "f1c3f9b6-7d59-4215-a4c5-d8b3f6c16de5",
+      "params": [{ "name": "brandId", "value": "1", "isPath": false }],
+      "tests": []
+    },
+    {
+      "containerId": "d0d93eaf-7d33-4f28-9901-6fcfaabbc422",
+      "sortNum": 80000,
+      "headers": [
+        { "name": "Accept", "value": "*/*" },
+        {
+          "name": "User-Agent",
+          "value": "Thunder Client (https://www.thunderclient.io)"
+        }
+      ],
+      "colId": "7e6b3ade-94cd-46ae-94c9-719435dc238b",
+      "name": "/api/Buggy/notFound",
+      "url": "{{url}}/api/Buggy/notFound",
+      "method": "GET",
+      "modified": "2021-12-05T18:13:19.790Z",
+      "created": "2021-12-05T18:09:54.553Z",
+      "_id": "84841a24-eed6-40ff-9802-94546ec8fc5b",
+      "params": [],
+      "tests": []
+    },
+    {
+      "containerId": "ec31288f-b656-4b80-a2fb-24cf7c4d3bbd",
+      "sortNum": 85000,
+      "headers": [
+        { "name": "Accept", "value": "*/*" },
+        {
+          "name": "User-Agent",
+          "value": "Thunder Client (https://www.thunderclient.io)"
+        }
+      ],
+      "colId": "7e6b3ade-94cd-46ae-94c9-719435dc238b",
+      "name": "GetProducts FilterBy TypeId",
+      "url": "{{url}}/api/ProductsGeneric?typeId=1",
+      "method": "GET",
+      "modified": "2021-12-06T16:14:37.163Z",
+      "created": "2021-12-06T16:14:30.109Z",
+      "_id": "be369799-6ece-46c5-8635-a002761192b5",
+      "params": [{ "name": "typeId", "value": "1", "isPath": false }],
+      "tests": []
+    },
+    {
+      "containerId": "d0d93eaf-7d33-4f28-9901-6fcfaabbc422",
+      "sortNum": 90000,
+      "headers": [
+        { "name": "Accept", "value": "*/*" },
+        {
+          "name": "User-Agent",
+          "value": "Thunder Client (https://www.thunderclient.io)"
+        }
+      ],
+      "colId": "7e6b3ade-94cd-46ae-94c9-719435dc238b",
+      "name": "/api/Buggy/serverError",
+      "url": "{{url}}/api/Buggy/serverError",
+      "method": "GET",
+      "modified": "2021-12-05T18:18:29.476Z",
+      "created": "2021-12-05T18:18:10.647Z",
+      "_id": "6f7d518a-9c04-473b-bfae-e7e42dcd70f9",
+      "params": [],
+      "tests": []
+    },
+    {
+      "containerId": "ec31288f-b656-4b80-a2fb-24cf7c4d3bbd",
+      "sortNum": 95000,
+      "headers": [
+        { "name": "Accept", "value": "*/*" },
+        {
+          "name": "User-Agent",
+          "value": "Thunder Client (https://www.thunderclient.io)"
+        }
+      ],
+      "colId": "7e6b3ade-94cd-46ae-94c9-719435dc238b",
+      "name": "GetProducts FilterBy Brands & Types",
+      "url": "{{url}}/api/ProductsGeneric?typeId=1&brandId=1",
+      "method": "GET",
+      "modified": "2021-12-06T16:16:31.343Z",
+      "created": "2021-12-06T16:15:32.505Z",
+      "_id": "52756fde-80ee-46ce-803b-669d373dd36c",
+      "params": [
+        { "name": "typeId", "value": "1", "isPath": false },
+        { "name": "brandId", "value": "1", "isPath": false }
+      ],
+      "tests": []
+    },
+    {
+      "containerId": "d0d93eaf-7d33-4f28-9901-6fcfaabbc422",
+      "sortNum": 100000,
+      "headers": [
+        { "name": "Accept", "value": "*/*" },
+        {
+          "name": "User-Agent",
+          "value": "Thunder Client (https://www.thunderclient.io)"
+        }
+      ],
+      "colId": "7e6b3ade-94cd-46ae-94c9-719435dc238b",
+      "name": "/api/Buggy/badRequest",
+      "url": "{{url}}/api/Buggy/badRequest",
+      "method": "GET",
+      "modified": "2021-12-05T18:18:58.191Z",
+      "created": "2021-12-05T18:18:50.638Z",
+      "_id": "8caf5397-e01b-4f2f-a11e-5a3ac6dc4490",
+      "params": [],
+      "tests": []
+    },
+    {
+      "containerId": "d0d93eaf-7d33-4f28-9901-6fcfaabbc422",
+      "sortNum": 105000,
+      "headers": [
+        { "name": "Accept", "value": "*/*" },
+        {
+          "name": "User-Agent",
+          "value": "Thunder Client (https://www.thunderclient.io)"
+        }
+      ],
+      "colId": "7e6b3ade-94cd-46ae-94c9-719435dc238b",
+      "name": "/api/Buggy/badRequest/[string]",
+      "url": "{{url}}/api/Buggy/badRequest/five",
+      "method": "GET",
+      "modified": "2021-12-06T12:16:08.466Z",
+      "created": "2021-12-05T18:23:59.537Z",
+      "_id": "4d21de93-fc11-4804-8e40-3161fcfb7966",
+      "params": [],
+      "tests": []
+    },
+    {
+      "containerId": "ec31288f-b656-4b80-a2fb-24cf7c4d3bbd",
+      "sortNum": 105000,
+      "headers": [
+        { "name": "Accept", "value": "*/*" },
+        {
+          "name": "User-Agent",
+          "value": "Thunder Client (https://www.thunderclient.io)"
+        }
+      ],
+      "colId": "7e6b3ade-94cd-46ae-94c9-719435dc238b",
+      "name": "GetProducts Page 1 Size 3",
+      "url": "{{url}}/api/ProductsGeneric?pageSize=3&pageIndex=1",
+      "method": "GET",
+      "modified": "2021-12-06T16:42:44.763Z",
+      "created": "2021-12-06T16:40:16.118Z",
+      "_id": "e95f2979-57b9-4adc-9052-289de30941fa",
+      "params": [
+        { "name": "pageSize", "value": "3", "isPath": false },
+        { "name": "pageIndex", "value": "1", "isPath": false }
+      ],
+      "tests": []
+    },
+    {
+      "containerId": "d0d93eaf-7d33-4f28-9901-6fcfaabbc422",
+      "sortNum": 110000,
+      "headers": [
+        { "name": "Accept", "value": "*/*" },
+        {
+          "name": "User-Agent",
+          "value": "Thunder Client (https://www.thunderclient.io)"
+        }
+      ],
+      "colId": "7e6b3ade-94cd-46ae-94c9-719435dc238b",
+      "name": "/api/Buggy/doesNotExistsEndPoint",
+      "url": "{{url}}/api/Buggy/doesNotExistsEndPoint",
+      "method": "GET",
+      "modified": "2021-12-05T18:24:28.728Z",
+      "created": "2021-12-05T18:22:16.599Z",
+      "_id": "07a205f5-53c1-4cce-93cc-82d6e951952a",
+      "params": [],
+      "tests": []
+    },
+    {
+      "containerId": "ec31288f-b656-4b80-a2fb-24cf7c4d3bbd",
+      "sortNum": 115000,
+      "headers": [
+        { "name": "Accept", "value": "*/*" },
+        {
+          "name": "User-Agent",
+          "value": "Thunder Client (https://www.thunderclient.io)"
+        }
+      ],
+      "colId": "7e6b3ade-94cd-46ae-94c9-719435dc238b",
+      "name": "GetProducts Page 1 Size 20",
+      "url": "{{url}}/api/ProductsGeneric?pageSize=20&pageIndex=1",
+      "method": "GET",
+      "modified": "2021-12-06T17:03:56.039Z",
+      "created": "2021-12-06T17:03:37.404Z",
+      "_id": "f9e7f2b8-29eb-491b-b35d-4a191d9eaac0",
+      "params": [
+        { "name": "pageSize", "value": "20", "isPath": false },
+        { "name": "pageIndex", "value": "1", "isPath": false }
+      ],
+      "tests": []
+    },
+    {
+      "containerId": "ec31288f-b656-4b80-a2fb-24cf7c4d3bbd",
+      "sortNum": 125000,
+      "headers": [
+        { "name": "Accept", "value": "*/*" },
+        {
+          "name": "User-Agent",
+          "value": "Thunder Client (https://www.thunderclient.io)"
+        }
+      ],
+      "colId": "7e6b3ade-94cd-46ae-94c9-719435dc238b",
+      "name": "GetProducts By Name Page 1",
+      "url": "{{url}}/api/ProductsGeneric?pageIndex=1&search=Dummies",
+      "method": "GET",
+      "modified": "2021-12-06T17:11:25.888Z",
+      "created": "2021-12-06T17:09:48.437Z",
+      "_id": "ac3b9263-b644-4d76-b716-06b54d444546",
+      "params": [
+        {
+          "name": "pageSize",
+          "value": "20",
+          "isDisabled": true,
+          "isPath": false
+        },
+        { "name": "pageIndex", "value": "1", "isPath": false },
+        { "name": "search", "value": "Dummies", "isPath": false }
+      ],
       "tests": []
     }
   ]
