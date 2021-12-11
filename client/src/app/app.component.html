@@ -1,1 +1,18 @@
-<span>{{ title }} - Welcome</span>
+<app-nav-bar></app-nav-bar>
+
+<div class="">
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+        <div
+          class="d-flexc justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom"
+        >
+          <h1 class="h2"><i class="fas fa-house-user"></i> Home</h1>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident deleniti doloribus modi nesciunt, qui laboriosam voluptates tempora exercitationem excepturi architecto, reprehenderit voluptatum harum. Delectus repudiandae facilis soluta molestias, est excepturi?</p>
+        <ul>
+            <li  *ngFor="let product of productsGeneric">{{product.name}}</li>
+        </ul>
+    </main>
+
+
+    <span>{{ title }} - Welcome</span>
+</div>
