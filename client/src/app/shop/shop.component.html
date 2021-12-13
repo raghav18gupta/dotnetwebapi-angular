@@ -1,0 +1,81 @@
+<div class="container">
+  <div class="row">
+
+    <section class="col-3">
+      <h5 class="ml-3">Sort</h5>
+      <select class="custom-select my-3" (change)="onSortSelected($event.target.value)">
+        <option *ngFor="let sort of sortOptions">
+          {{sort.name}}
+        </option>
+      </select>
+
+      <hr>
+      <h5 class="ml-3">Brands</h5>
+      <ul class="list-group my-3">
+        <li class="list-group-item" 
+          *ngFor="let productBrand of productBrands"
+          [class.active]="productBrand.id===this.shopParams.brandId"
+          [value]="productBrand.id"
+          (click)="onBrandSelected(productBrand.id)"
+        >
+          {{productBrand.name}}
+        </li>
+      </ul>
+
+      <hr>
+      <h5 class="ml-3">Types</h5>
+      <ul class="list-group my-3">
+        <li class="list-group-item"
+        *ngFor="let productType of productTypes"
+        [class.active]="productType.id===this.shopParams.typeId"
+        [value]="productType.id"
+        (click)="onTypeSelected(productType.id)"
+        >
+          {{productType.name}}
+        </li>
+      </ul>
+      
+    
+
+    </section>
+
+    <section class="col-9">
+      <div class="d-flex justify-content-between align-items-center pb-2">
+        <app-paging-header
+          [pageNumber]="shopParams.pageNumber"
+          [pageSize]="shopParams.pageSize"
+          [totalCount]="totalCount"
+        >
+        </app-paging-header>
+        
+        <div class="form-inline mt-2 mr-2">
+          <input (keyup)="onSearch()" #search class="form-control" style="width: 300px;" placeholder="Search" type="text">
+          <button (click)="onSearch()" class="btn btn-outline-primary my-2 ml-2 fa fa-search"> Search</button>
+          <button (click)="onReset()" class="btn btn-outline-success my-2 ml-1 fa fa-undo"> Reset</button>
+        </div>
+      </div>
+      
+      <div class="d-flex justify-content-center">
+
+        <app-pager
+            [totalCount]="totalCount"
+            [pageSize]="shopParams.pageSize"
+            (pageChanged)="onPageChanged($event)"
+          >
+          </app-pager>
+      </div>
+
+      <div class="card-group">
+        <div class="row">
+          <div class="card col-sm-5 mt-2 mr-2" *ngFor="let item of products">
+            <app-product-item [product]="item"></app-product-item>
+          </div>
+        </div>
+      </div>
+
+      
+    </section>
+  </div>
+</div>
+
+

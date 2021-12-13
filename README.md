@@ -80,4 +80,15 @@
    3. **Searching**
    4. **Paging**
    5. **CORS**
-# Section 7 - Client - Angular
+# Section 9 - Client
+   1. Modules
+      - **App Module**: Autot generated, responsible for loading and bootstraping application. Making sure our components are loaded.
+      - **Core Module**: Will have Singleton components, like - Navbar.
+      - **Shared Module**: Anything we need to use in more than 1 feature module.
+      - **Feature Module**: Each feature we create will have its own module and routing.
+   2. commands
+      - module: `ng g m core`
+      - cd shop. component: `ng g c shop --flat --skip-tests`
+      - service: `ng g s shop --flat --skip-tests`
+      - module: `ng g m shop-routing --flat`
+   3. 

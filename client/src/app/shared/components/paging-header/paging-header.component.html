@@ -1,0 +1,15 @@
+<header>
+  <span
+    >Showing
+    <strong>
+      {{ (pageNumber - 1) * (pageSize + 1) }}
+      -
+      {{
+        pageNumber * pageSize > 16
+          ? 16
+          : pageNumber * pageSize
+      }}
+    </strong>
+    of <strong>{{ this.totalCount }}</strong></span
+  >
+</header>
