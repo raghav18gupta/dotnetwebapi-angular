@@ -91,4 +91,8 @@
       - cd shop. component: `ng g c shop --flat --skip-tests`
       - service: `ng g s shop --flat --skip-tests`
       - module: `ng g m shop-routing --flat`
-   3. 
+# Section 10: Routing
+   1. **Lazy Loading**
+      - `app\app-routing.module.ts`:
+        - `{path: 'shop', loadChildren: () => import('./shop/shop.module').then(mod => mod.ShopModule)},`
+

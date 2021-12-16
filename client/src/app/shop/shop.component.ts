@@ -42,11 +42,9 @@ export class ShopComponent implements OnInit {
       this.shopParams.pageNumber = response!.pageIndex;
       this.shopParams.pageSize = response!.pageSize;
       // this.totalCount = response!.count;
-      console.log('totalCount = ', this.totalCount);
     }, error => {
       console.error(error);
     });
-
   }
 
   getProductBrands(){

@@ -2,6 +2,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { delay, map } from 'rxjs/operators';
 import { IPagination } from '../shared/models/pagination';
+import { IProduct } from '../shared/models/product';
 import { IProductBrand } from '../shared/models/productBrand';
 import { IProductType } from '../shared/models/productType';
 import { ShopParams } from '../shared/models/shopParams';
@@ -39,7 +40,12 @@ export class ShopService {
         })
       );
   }
-
+  
+  getProduct(id: number){
+    console.clear();
+    console.log(id);
+    return this.http.get<IProduct>(this.baseUrl + 'productsGeneric/' + id);
+  }
   getProductBrands() {
     return this.http.get<IProductBrand[]>(
       this.baseUrl + 'productsGeneric/brands'
